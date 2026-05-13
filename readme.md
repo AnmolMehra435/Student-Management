@@ -1,7 +1,7 @@
 This is my fullstack student management system build in MERN stack
 
 keys:- 
-1. Authentication and Authorizaiton
+1. Authentication and Authorization
 2. CRUD operations
 3. Logout/Go back
 4. Search data
