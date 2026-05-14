@@ -65,3 +65,6 @@ Model Schema:-
         type: String,
         enum: ['MCA', 'BCA', 'Btech']
     }}
+
+Future Scope:-
+Currently I am learning devOps so I can deploy, test and monitor this app
