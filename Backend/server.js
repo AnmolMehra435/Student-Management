@@ -5,6 +5,8 @@ const verifyJwt = require("./middleware/verifyJwt")
 require('dotenv').config()
 const app = express();
 
+const port = process.env.PORT || 5000
+
 app.use(cors());
 app.use(express.json());
 
@@ -17,7 +19,7 @@ const connectDB = async () => {
 
         console.log("MongoDB connected....")
 
-        app.listen(5000, () => {
+        app.listen(port, () => {
             console.log("Server is running...")
         })
     }catch(err){
