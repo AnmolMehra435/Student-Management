@@ -69,23 +69,4 @@ Model Schema:-
 Future Scope:-
 Currently I am learning devOps so I can deploy, test and monitor this app
 
-
-DevOps progress
-
-15/05/26:-
-
-learned Linux basics for devops
-
-commands like
-ls
-mkdir
-rm
-cp
-cat
-nano
-sed
-grep
-chmod
-sudo apt
-ps
-kill
+Dockerized the app into two containers frontend and backend currently learning CI/CD
