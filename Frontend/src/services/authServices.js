@@ -1,5 +1,4 @@
 import axios from 'axios'
-const API_URL = import.meta.env.VITE_API_URL
 
 const handleRegister = async (email, pass, role) => {
     const newUser = {
@@ -10,7 +9,7 @@ const handleRegister = async (email, pass, role) => {
 
     try{
         await axios.post(
-            `${API_URL}/auth/register`,
+            '/api/auth/register',
             newUser
         )
 
@@ -28,7 +27,7 @@ const handleLogin = async (email, pass, navigate) => {
 
     try{
         const response = await axios.post(
-            `${API_URL}/auth/login`,
+            '/api/auth/login',
             user
         )
 

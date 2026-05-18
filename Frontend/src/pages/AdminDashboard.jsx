@@ -7,9 +7,8 @@ import '../styles/dashboard.css'
 
 
 function AdminDashboard(){
-    const API_URL = import.meta.env.VITE_API_URL
-
-    const navigate = useNavigate()
+  
+   const navigate = useNavigate()
 
     const [loading, setLoading] = useState(true);
     const [validate, setValidate] = useState(false);
@@ -28,7 +27,7 @@ function AdminDashboard(){
         const verifyToken = async () => {
             try{
                 const response = await axios.get(
-                    `${API_URL}/dashboard`,
+                    '/api/dashboard',
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
