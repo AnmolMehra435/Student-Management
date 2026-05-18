@@ -69,4 +69,4 @@ Model Schema:-
 Future Scope:-
 Currently I am learning devOps so I can deploy, test and monitor this app
 
-Dockerized the app into two containers frontend and backend currently learning CI/CD
+Using a Docker inside a VM my application is successfully deployed and is live on https://studentmanagement963.qzz.io/ this link 
