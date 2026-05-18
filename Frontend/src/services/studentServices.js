@@ -1,9 +1,10 @@
 import axios from 'axios'
+const API_URL = import.meta.env.VITE_API_URL
 
 const getStudent = async () => {
     try{
         const response = await axios.get(
-            'http://localhost:5000/api/student'
+            `${API_URL}/api/student`
         )
 
         const studentsDB = response.data.students;
@@ -26,7 +27,7 @@ const addStudent = async (name, email, age, marks, course) => {
     
     try{
         const response = await axios.post(
-            'http://localhost:5000/api/student/addstudent',
+            `${API_URL}/api/student/addstudent`,
             newStudent
         )
 
@@ -41,7 +42,7 @@ const deleteStudent = async (email) => {
     const useremail = email;
     try{
         const response = await axios.post(
-            'http://localhost:5000/api/student/deletestudent',
+            `${API_URL}/api/student/deletestudent`,
             {
                 email: useremail
             }
@@ -59,7 +60,7 @@ const getOneStudent = async (email) => {
 
     try{
         const response = await axios.post(
-            'http://localhost:5000/api/student/getonestudent',
+            `${API_URL}/api/student/getonestudent`,
             {
                 email: useremail
             }
@@ -87,7 +88,7 @@ const editStudent = async (name, email, age, marks, course) => {
 
     try{
        await axios.post(
-            'http://localhost:5000/api/student/editstudent',
+            `${API_URL}/api/student/editstudent`,
             student
         )
 

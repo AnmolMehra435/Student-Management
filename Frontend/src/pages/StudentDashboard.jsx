@@ -6,6 +6,7 @@ import '../styles/dashboard.css'
 
 
 function StudentDashboard(){
+    const API_URL = import.meta.env.VITE_API_URL
 
     const navigate = useNavigate()
     const [loading, setLoading] = useState(true);
@@ -26,7 +27,7 @@ function StudentDashboard(){
         const verifyToken = async () => {
             try{
                 const response = await axios.get(
-                    'http://localhost:5000/dashboard',
+                    `${API_URL}/dashboard`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
