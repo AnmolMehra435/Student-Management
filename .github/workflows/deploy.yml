@@ -32,11 +32,8 @@ jobs:
         working-directory: ./Backend
         run: npm install
 
-      - name: backend build
-        working-directory: ./backend
-        run: npm run dev
-
   deploy:
+    needs: ci
     runs-on: ubuntu-latest
 
     steps:
