@@ -1,4 +1,4 @@
-Student Management System (MERN Stack)
+# Student Management System (MERN Stack)
 
 A full-stack Student Management System built using the MERN stack with production-style deployment workflows, Docker containerization, CI/CD automation, and cloud hosting.
 
