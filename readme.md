@@ -102,7 +102,7 @@ Code Push → GitHub Actions → CI Checks → SSH into EC2 → Docker Rebuild �
 
 ---
 
-# 📦 Database Schema
+#  Database Schema
 
 ## User Schema
 
@@ -170,7 +170,7 @@ docker compose up --build
 
 ---
 
-# 🔐 Environment Variables
+#  Environment Variables
 
 Example `.env` configuration:
 
@@ -182,7 +182,7 @@ JWT_SECRET=your_secret_key
 
 ---
 
-# 📚 What I Learned From This Project
+#  What I Learned From This Project
 
 * Full Stack MERN Development
 * REST API Design
@@ -196,7 +196,7 @@ JWT_SECRET=your_secret_key
 
 ---
 
-# 🚧 Future Improvements
+#  Future Improvements
 
 * Backend testing using Jest & Supertest
 * Monitoring & logging
