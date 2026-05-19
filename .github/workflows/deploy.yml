@@ -6,6 +6,36 @@ on:
       - main
 
 jobs:
+
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout-Code
+        uses: actions/checkout@v4
+
+      - name: node setup
+        uses: actions/setup-node@v4
+        with:
+         node-version: 20
+
+      - name: frontend check
+        working-directory: ./Frontend 
+        run: npm install
+
+      - name: build frontend
+        working-directory: ./Frontend
+        run: npm run build
+
+
+      - name: backend check
+        working-directory: ./Backend
+        run: npm install
+
+      - name: backend build
+        working-directory: ./backend
+        run: npm run dev
+
   deploy:
     runs-on: ubuntu-latest
 
