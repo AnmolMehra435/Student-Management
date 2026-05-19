@@ -1,72 +1,214 @@
-This is my fullstack student management system build in MERN stack
+Student Management System (MERN Stack)
 
-keys:- 
-1. Authentication and Authorization
-2. CRUD operations
-3. Logout/Go back
-4. Search data
-   
-Roles:-
-1. Admin :- Create Student, view all Students, edit student, search student, delete student
-2. Student :- View their data
+A full-stack Student Management System built using the MERN stack with production-style deployment workflows, Docker containerization, CI/CD automation, and cloud hosting.
 
-Tech Stack:-
+Live Demo: https://studentmanagement963.qzz.io/
 
-Frontend:-
-1. React :- used to build and style pages and components
-2. Axios :- used in react to send request to server and handle its response
-3. React-router-dom:- used to route pages in frontend and navigate user from one page to another
+---
 
-Backend:-
-1. Node.js :- used to run the js server
-2. Express.js :- used for routing, middlewares and controllers
-3. Bcrypt :- used to hash and compare password
-4. cors:- used for allowing Cross origin request sharing
-5. dotenv:- used to store secret keys and urls
-6. jsonwebtoken(jwt):- used to create token for each user to verify them for future requests
-7. mongoose:- create model schema and handle database
+#  Features
 
-DataBase:-
-1. MongoDB:- used for cloud base database using mongodb atlas
+## Authentication & Authorization
 
-Model Schema:-
-1. User: { email: {
-        type: String,
-        trim: true,
-        lowercase: true,
-        required: true,
-        unique: true
-    },
+* JWT-based authentication
+* Role-based authorization
+* Secure password hashing using bcrypt
 
-    password: {
-        type: String,
-        required: true
-    },
-    role: {
-        type: String,
-        required: true,
-        enum: ['Admin', 'Student']
-    }}
-2. Students: {name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    age: {
-        type: Number,
-        required: true
-    },
-    marks: Number,
-    course: {
-        type: String,
-        enum: ['MCA', 'BCA', 'Btech']
-    }}
+## Student Management
 
-Future Scope:-
-Currently I am learning devOps so I can deploy, test and monitor this app
+* Create student records
+* View all students
+* Update student details
+* Delete students
+* Search students dynamically
 
-Using a Docker inside a VM my application is successfully deployed and is live on https://studentmanagement963.qzz.io/ this link 
+## User Experience
+
+* Protected routes
+* Logout functionality
+* Responsive frontend
+* Role-specific dashboards
+
+---
+
+#  Roles
+
+## Admin
+
+* Create Students
+* View All Students
+* Edit Student Data
+* Search Students
+* Delete Students
+
+## Student
+
+* View Personal Student Data
+
+---
+
+# Tech Stack
+
+## Frontend
+
+* React.js
+* React Router DOM
+* Axios
+* Vite
+
+## Backend
+
+* Node.js
+* Express.js
+* JWT Authentication
+* bcrypt
+* dotenv
+* CORS
+* Mongoose
+
+## Database
+
+* MongoDB Atlas
+
+## DevOps & Deployment
+
+* Docker
+* Docker Compose
+* GitHub Actions (CI/CD)
+* AWS EC2
+* NGINX Reverse Proxy
+* Linux
+* Cloudflare SSL/HTTPS
+
+---
+
+#  DevOps & Deployment Workflow
+
+This project follows a production-style deployment workflow:
+
+* Containerized frontend and backend using Docker
+* Multi-container setup managed through Docker Compose
+* Automated CI/CD pipeline using GitHub Actions
+* Deployed on AWS EC2 Linux VM
+* Configured NGINX as a reverse proxy
+* Enabled HTTPS using Cloudflare SSL
+* Automated deployment on every push to the main branch
+
+### CI/CD Flow
+
+```text
+Code Push → GitHub Actions → CI Checks → SSH into EC2 → Docker Rebuild → Deployment
+```
+
+---
+
+# 📦 Database Schema
+
+## User Schema
+
+```js
+{
+  email: {
+    type: String,
+    trim: true,
+    lowercase: true,
+    required: true,
+    unique: true
+  },
+
+  password: {
+    type: String,
+    required: true
+  },
+
+  role: {
+    type: String,
+    required: true,
+    enum: ['Admin', 'Student']
+  }
+}
+```
+
+## Student Schema
+
+```js
+{
+  name: {
+    type: String,
+    required: true
+  },
+
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+
+  age: {
+    type: Number,
+    required: true
+  },
+
+  marks: Number,
+
+  course: {
+    type: String,
+    enum: ['MCA', 'BCA', 'Btech']
+  }
+}
+```
+
+---
+
+#  Docker Setup
+
+## Run Using Docker Compose
+
+```bash
+docker compose up --build
+```
+
+---
+
+# 🔐 Environment Variables
+
+Example `.env` configuration:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+```
+
+---
+
+# 📚 What I Learned From This Project
+
+* Full Stack MERN Development
+* REST API Design
+* Authentication & Authorization
+* Docker & Containerization
+* CI/CD Pipeline Automation
+* AWS EC2 Deployment
+* NGINX Reverse Proxy Configuration
+* HTTPS & Cloudflare SSL
+* Linux Server Management
+
+---
+
+# 🚧 Future Improvements
+
+* Backend testing using Jest & Supertest
+* Monitoring & logging
+* Redis caching
+* WebSocket integration
+* Role-based analytics dashboard
+* Kubernetes deployment exploration
+
+---
+
+#  Author
+
+Anmol Mehra
+
+* LinkedIn: https://www.linkedin.com/in/anmolmehra435
